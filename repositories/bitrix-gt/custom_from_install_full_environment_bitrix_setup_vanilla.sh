@@ -167,12 +167,13 @@ installPkg(){
   apt update
 #	export DEBIAN_FRONTEND="noninteractive"
 #	debconf-set-selections <<< 'exim4-config exim4/dc_eximconfig_configtype select internet site; mail is sent and received directly using SMTP'
+# TODO how to install php8.2-mcrypt ASTRA
   apt install -y  php8.2 php8.2-cli \
                   php8.2-common php8.2-gd php8.2-ldap \
                   php8.2-mbstring php8.2-mysql \
                   php8.2-opcache php8.2-curl php-redis \
                   php-pear php8.2-apcu \
-                  php8.2-mcrypt php8.2-memcache \
+                  php8.2-memcache \
                   php8.2-zip php8.2-pspell php8.2-xml \
                   apache2 nginx mariadb-server mariadb-common \
                   nodejs npm redis
