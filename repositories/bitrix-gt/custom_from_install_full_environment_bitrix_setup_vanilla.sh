@@ -180,7 +180,8 @@ installPkg(){
 }
 
 dplApache(){
-		mkdir /etc/systemd/system/apache2.service.d
+	echo 'AstraMode off' >> /etc/apache2/apache2.conf	
+  mkdir /etc/systemd/system/apache2.service.d
 		cat <<EOF >> /etc/systemd/system/apache2.service.d/privtmp.conf
 [Service]
 PrivateTmp=false
@@ -188,7 +189,7 @@ EOF
 		systemctl daemon-reload
 	  ln -sf /etc/php/8.2/mods-available/zbx-bitrix.ini  /etc/php/8.2/apache2/conf.d/99-bitrix.ini
     ln -sf /etc/php/8.2/mods-available/zbx-bitrix.ini  /etc/php/8.2/cli/conf.d/99-bitrix.ini
-    echo 'AstraMode off' >> /etc/apache2/apache2.conf
+    
 
 
     a2dismod --force autoindex
