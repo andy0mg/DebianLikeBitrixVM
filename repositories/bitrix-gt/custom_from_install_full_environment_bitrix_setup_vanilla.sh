@@ -2,7 +2,7 @@
 #
 # metadata_begin
 # recipe: Bitrix Vanilla
-# tags: debian11
+# tags: debian11, astra 1.8
 # revision: 1
 # description_ru: Рецепт установки Bitrix Vanilla
 # description_en: Bitrix CMS installing recipe
@@ -162,21 +162,20 @@ installPkg(){
 	apt update
 	apt install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2 unzip rsync nftables pwgen make build-essential wget curl
 
-	echo "deb [signed-by=/etc/apt/trusted.gpg.d/suru.gpg] https://ftp.mpi-inf.mpg.de/mirrors/linux/mirror/deb.sury.org/repositories/php $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
-  curl -s -o /etc/apt/trusted.gpg.d/suru.gpg https://ftp.mpi-inf.mpg.de/mirrors/linux/mirror/deb.sury.org/repositories/php/apt.gpg
+#	echo "deb [signed-by=/etc/apt/trusted.gpg.d/suru.gpg] https://ftp.mpi-inf.mpg.de/mirrors/linux/mirror/deb.sury.org/repositories/php $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
+#  curl -s -o /etc/apt/trusted.gpg.d/suru.gpg https://ftp.mpi-inf.mpg.de/mirrors/linux/mirror/deb.sury.org/repositories/php/apt.gpg
   apt update
-	export DEBIAN_FRONTEND="noninteractive"
-	debconf-set-selections <<< 'exim4-config exim4/dc_eximconfig_configtype select internet site; mail is sent and received directly using SMTP'
+#	export DEBIAN_FRONTEND="noninteractive"
+#	debconf-set-selections <<< 'exim4-config exim4/dc_eximconfig_configtype select internet site; mail is sent and received directly using SMTP'
   apt install -y  php8.2 php8.2-cli \
                   php8.2-common php8.2-gd php8.2-ldap \
                   php8.2-mbstring php8.2-mysql \
                   php8.2-opcache php8.2-curl php-redis \
-                  php-pear php8.2-apcu php-geoip \
+                  php-pear php8.2-apcu \
                   php8.2-mcrypt php8.2-memcache \
                   php8.2-zip php8.2-pspell php8.2-xml \
                   apache2 nginx mariadb-server mariadb-common \
-                  nodejs npm redis \
-                  exim4 exim4-config
+                  nodejs npm redis
 }
 
 dplApache(){
