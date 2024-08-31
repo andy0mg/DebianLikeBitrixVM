@@ -196,12 +196,12 @@ EOF
     a2enmod rewrite
 		systemctl stop apache2
 		systemctl enable --now apache2
+  		echo -e "\n127.0.0.1 push httpd\n" >> /etc/hosts
 		systemctl start nginx
 }
 
 dplNginx(){
-	echo -e "\n127.0.0.1 push httpd\n" >> /etc/hosts
-	rm /etc/nginx/sites-enabled/default
+		rm /etc/nginx/sites-enabled/default
 	ln -s /etc/nginx/sites-available/rtc.conf /etc/nginx/sites-enabled/rtc.conf
 	ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 	systemctl stop nginx
