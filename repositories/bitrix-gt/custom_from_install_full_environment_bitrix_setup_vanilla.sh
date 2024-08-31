@@ -256,7 +256,7 @@ EOF
 	systemctl daemon-reload
 	systemctl stop push-server
 	systemctl --now enable push-server
-#	systemctl start push-server
+	systemctl start push-server
 }
 
 dplMYSQL() {
@@ -309,7 +309,7 @@ deployConfig() {
 	dplApache
 	dplNginx
 	dplRedis
-	dplPush
+#	dplPush
 	dplMYSQL
 
   systemctl --now enable mariadb
