@@ -298,11 +298,11 @@ EOF
 
 deployConfig() {
 
-	wget -q 'https://dev.1c-bitrix.ru/docs/chm_files/debian.zip'
-  unzip debian.zip && rm debian.zip
-  rsync -a --exclude=php.d ./debian/ /etc/
-  rsync -a ./debian/php.d/ /etc/php/8.2/mods-available/
-#  rsync -a ./debian/php.d/ /etc/php/7.4/mods-available/
+	wget -q 'https://dev.1c-bitrix.ru/docs/chm_files/astra.zip'
+  unzip astra.zip && rm astra.zip
+  rsync -a --exclude=php.d ./astra/ /etc/
+  rsync -a ./astra/php.d/ /etc/php/8.2/mods-available/
+#  rsync -a ./astra/php.d/ /etc/php/7.4/mods-available/
 	mkdir -p /var/www/html/bx-site
 
 	nfTabl
