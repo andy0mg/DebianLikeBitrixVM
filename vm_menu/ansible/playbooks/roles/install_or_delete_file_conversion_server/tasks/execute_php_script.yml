@@ -35,6 +35,13 @@
     group: "{{ bx_transformer_bx_ansible_group }}"
     mode: '0640'
 
+- name: Add the user 'www-data' with a bash shell, appending the group 'admins' and 'developers' to the user's groups
+  ansible.builtin.user:
+    name: "{{ bx_transformer_bx_ansible_executer }}"
+    shell: /bin/bash
+#    groups: admins,developers
+#    append: yes    
+
 - name: Run php-script
   command: php -f "{{ bx_transformer_cache_directory }}/{{ domain }}-{{ bx_unique_id }}/{{ php_script }}"
   become: true
