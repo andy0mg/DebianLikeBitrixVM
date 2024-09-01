@@ -180,7 +180,7 @@ installPkg(){
 }
 
 dplApache(){
-	echo 'AstraMode off' >> /etc/apache2/apache2.conf	
+#	echo 'AstraMode off' >> /etc/apache2/apache2.conf	
   mkdir /etc/systemd/system/apache2.service.d
 		cat <<EOF >> /etc/systemd/system/apache2.service.d/privtmp.conf
 [Service]
