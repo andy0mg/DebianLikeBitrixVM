@@ -33,7 +33,7 @@ generate_password() {
 
 BRANCH="master"
 SETUP_BITRIX_DEBIAN_URL="https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/$BRANCH/repositories/bitrix-gt/custom_from_install_full_environment_bitrix_setup_vanilla.sh"
-REPO_URL="https://github.com/EduardRe/DebianLikeBitrixVM.git"
+REPO_URL="https://github.com/andy0mg/DebianLikeBitrixVM.git"
 
 DB_NAME="bitrix"
 DB_USER="bitrix"
