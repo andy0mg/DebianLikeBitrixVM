@@ -81,8 +81,13 @@ systemctl enable ds-metrics.service
 
 systemctl start nginx.service
 systemctl enable nginx.service
+setenforce 0;
+sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config;
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
 
 
+reboot
 
 END
 
