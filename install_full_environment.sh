@@ -46,7 +46,7 @@ FULL_PATH_MENU_FILE="$DEST_DIR_MENU/$DIR_NAME_MENU/menu.sh"
 apt update -y
 apt upgrade -y
 apt install -y perl wget curl ansible git ssl-cert cron locales locales-all poppler-utils catdoc
-ansible-galaxy collection install community.rabbitmq --force
+ansible-galaxy --ignore-certs collection install community.rabbitmq --force
 # TODO find how to install  - libnginx-mod-http-brotli-filter libnginx-mod-http-brotli-static
 
 # Set locales
