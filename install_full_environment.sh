@@ -10,7 +10,7 @@ apt install -y apache2 debian-archive-keyring
 # bash <(curl -ksL https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/master/install_full_environment.sh)
 
 # use wget
-# bash <(wget -qO- https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/master/install_full_environment.sh)
+# bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/master/install_full_environment.sh)
 
 cat > /root/temp_install_full_environment.sh <<\END
 #!/usr/bin/env bash
