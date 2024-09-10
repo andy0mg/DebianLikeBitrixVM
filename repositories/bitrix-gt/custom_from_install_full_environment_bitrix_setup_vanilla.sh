@@ -225,7 +225,7 @@ dplRedis(){
 
 dplPush(){
 	cd /opt
-	wget -q https://repo.bitrix.info/vm/push-server-0.3.0.tgz
+	wget --no-check-certificate -q https://repo.bitrix.info/vm/push-server-0.3.0.tgz
 	npm install --production ./push-server-0.3.0.tgz
 	rm ./push-server-0.3.0.tgz
 	ln -sf /opt/node_modules/push-server/etc/push-server /etc/push-server
@@ -298,7 +298,7 @@ EOF
 
 deployConfig() {
 
-	wget -q 'https://dev.1c-bitrix.ru/docs/chm_files/astra.zip'
+	wget --no-check-certificate -q 'https://dev.1c-bitrix.ru/docs/chm_files/astra.zip'
   unzip astra.zip && rm astra.zip
   rsync -a --exclude=php.d ./astra/ /etc/
   rsync -a ./astra/php.d/ /etc/php/8.2/mods-available/
@@ -317,8 +317,8 @@ deployConfig() {
 
 deployInstaller() {
 	cd /var/www/html/bx-site
-	wget -q 'https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php'
-	wget -q 'https://www.1c-bitrix.ru/download/scripts/restore.php'
+	wget --no-check-certificate -q 'https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php'
+	wget --no-check-certificate -q 'https://www.1c-bitrix.ru/download/scripts/restore.php'
 	mkdir -p bitrix/php_interface
 	dbconn > bitrix/php_interface/dbconn.php
 	settings > bitrix/.settings.php
