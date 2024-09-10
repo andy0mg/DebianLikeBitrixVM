@@ -71,6 +71,7 @@
         group: "{{ group_user_server_sites }}"
         mode: "{{ permissions_sites_files }}"
         timeout: "{{ timeout_download_bitrix_install_files_new_site }}"
+        validate_certs: false
       ignore_errors: yes
       with_items: "{{ urls }}"
 
