@@ -7,7 +7,7 @@ echo 'APT::Get::EnableUpgrade true;' >> /etc/apt/apt.conf.d/99-astra-linux
 apt update
 apt install -y apache2 debian-archive-keyring
 # use curl
-# bash <(curl -sL https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/master/install_full_environment.sh)
+# bash <(curl -ksL https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/master/install_full_environment.sh)
 
 # use wget
 # bash <(wget -qO- https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/master/install_full_environment.sh)
