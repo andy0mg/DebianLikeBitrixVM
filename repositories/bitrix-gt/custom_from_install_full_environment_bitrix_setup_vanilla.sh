@@ -308,7 +308,7 @@ deployConfig() {
 	nfTabl
 	dplApache
 	dplNginx
-	dplRedis
+#	dplRedis
 #	dplPush
 	dplMYSQL
 
