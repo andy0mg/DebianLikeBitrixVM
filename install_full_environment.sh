@@ -123,7 +123,7 @@ update-alternatives --set phar /usr/bin/phar8.2
 update-alternatives --set phar.phar /usr/bin/phar.phar8.2
 
 
-ln -s $FULL_PATH_MENU_FILE "$DEST_DIR_MENU/menu.sh"
+ln -sfn $FULL_PATH_MENU_FILE "$DEST_DIR_MENU/menu.sh"
 
 # Final actions
 
