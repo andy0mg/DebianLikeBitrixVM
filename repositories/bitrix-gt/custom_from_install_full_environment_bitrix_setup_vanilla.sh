@@ -305,7 +305,7 @@ deployConfig() {
 #  rsync -a ./astra/php.d/ /etc/php/7.4/mods-available/
 	mkdir -p /var/www/html/bx-site
 
-	nfTabl
+#	nfTabl
 	dplApache
 	dplNginx
 #	dplRedis
