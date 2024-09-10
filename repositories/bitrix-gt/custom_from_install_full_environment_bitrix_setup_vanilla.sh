@@ -262,7 +262,7 @@ EOF
 
 dplMYSQL() {
 	echo 'innodb_strict_mode=off' >> /etc/mysql/my-bx.d/zbx-custom.cnf
-	mysql -e "create database bitrix;create user bitrix@localhost;grant all on bitrix.* to bitrix@localhost;set password for bitrix@localhost = PASSWORD('${DBPASS}')"
+	mysql -e "create database bitrix3;create user bitrix3@localhost;grant all on bitrix3.* to bitrix3@localhost;set password for bitrix3@localhost = PASSWORD('${DBPASS}')"
 	systemctl stop mysql
 	systemctl --now enable mysql
 	systemctl start mysql
