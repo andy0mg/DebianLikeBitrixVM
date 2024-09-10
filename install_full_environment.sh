@@ -60,7 +60,7 @@ bash -c 'echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/environment'
 source /etc/default/locale
 export LC_ALL="en_US.UTF-8"
 
-bash -c "$(curl -sL $SETUP_BITRIX_DEBIAN_URL)"
+bash -c "$(curl -ksL $SETUP_BITRIX_DEBIAN_URL)"
 
 source /root/run.sh
 
