@@ -201,7 +201,8 @@ EOF
 }
 
 dplNginx(){
-		rm /etc/nginx/sites-enabled/default
+[ -e /etc/nginx/sites-enabled/default ] && rm /etc/nginx/sites-enabled/default
+#  rm /etc/nginx/sites-enabled/default
 	ln -s /etc/nginx/sites-available/rtc.conf /etc/nginx/sites-enabled/rtc.conf
 	ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 	systemctl stop nginx
