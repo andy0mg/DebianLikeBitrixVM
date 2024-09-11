@@ -309,8 +309,8 @@ deployConfig() {
 #	nfTabl
 	dplApache
 	dplNginx
-#	dplRedis
-#	dplPush
+	dplRedis
+	dplPush
 	dplMYSQL
 
   systemctl --now enable mariadb
