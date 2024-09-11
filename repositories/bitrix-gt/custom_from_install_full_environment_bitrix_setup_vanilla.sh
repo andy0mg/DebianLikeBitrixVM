@@ -237,7 +237,8 @@ dplPush(){
 	cp etc/sysconfig/push-server-multi  /etc/sysconfig/push-server-multi
 	cp etc/push-server/push-server.service  /etc/systemd/system/
 	ln -sf /opt/node_modules/push-server /opt/push-server
-	useradd -g www-data bitrix
+#	useradd -g www-data bitrix
+ 	id -u bitrix &>/dev/null || useradd -g www-data bitrix
 
 	cat <<EOF >> /etc/sysconfig/push-server-multi
 GROUP=www-data
