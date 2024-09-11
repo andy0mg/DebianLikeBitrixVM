@@ -12,11 +12,11 @@
     enabled: false
 
 # transformer service
-- name: Disable service
-  service:
-    name: transformer.service
-    state: stopped
-    enabled: false
+#- name: Disable service
+#  service:
+#    name: transformer.service
+#    state: stopped
+#    enabled: false
 
 - name: Execute_php_script.yml
   include_tasks: execute_php_script.yml
@@ -49,5 +49,5 @@
   loop:
     - erlang
     - ffmpeg
-    - libreoffice-nogui
+ #   - libreoffice-nogui
     - rabbitmq-server
