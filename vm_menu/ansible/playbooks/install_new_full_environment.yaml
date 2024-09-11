@@ -133,7 +133,7 @@
         path: "/etc/{{ service_nginx_name }}/nginx.conf"
         marker: "# {mark} ANSIBLE MANAGED BLOCK"
         block: |
-         include custom_conf.d/section_http/*.conf;
+         include custom_conf.d/section_http/headers.conf;
         insertafter: "^http\\s*{"
 
     - name: Adding Nginx configuration file
