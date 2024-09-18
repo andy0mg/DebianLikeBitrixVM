@@ -170,13 +170,14 @@ installPkg(){
   apt install -y  php8.2 php8.2-cli \
                   php8.2-common php8.2-gd php8.2-ldap \
                   php8.2-mbstring php8.2-mysql \
-                  php8.2-opcache php8.2-curl php-redis \
+                  php8.2-opcache php8.2-curl php8.2-redis \
                   php-pear php8.2-apcu php-geoip \
                   php8.2-mcrypt php8.2-memcache \
                   php8.2-zip php8.2-pspell php8.2-xml \
-                  apache2 nginx mariadb-server mariadb-common \
+                  apache2 nginx mariadb-common \
                   nodejs npm redis \
                  exim4 exim4-config
+#	apt install -y  mariadb-server \ 
 }
 
 dplApache(){
@@ -310,7 +311,7 @@ deployConfig() {
 	dplNginx
 	dplRedis
 	dplPush
-	dplMYSQL
+#	dplMYSQL
 
   systemctl --now enable mariadb
 }
