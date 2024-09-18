@@ -176,7 +176,7 @@ installPkg(){
                   php8.2-zip php8.2-pspell php8.2-xml \
                   apache2 nginx mariadb-server mariadb-common \
                   nodejs npm redis \
-                  exim4 exim4-config
+                 exim4 exim4-config
 }
 
 dplApache(){
