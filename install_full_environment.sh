@@ -5,7 +5,7 @@ set -euo pipefail
 # MASTER branch
 
 # use curl
-# bash <(curl -sL https://raw.githubusercontent.com/EduardRe/DebianLikeBitrixVM/master/install_full_environment.sh)
+# bash <(curl -sL https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/debian12/install_full_environment.sh)
 
 # use wget
 # bash <(wget -qO- https://raw.githubusercontent.com/andy0mg/DebianLikeBitrixVM/debian12/install_full_environment.sh)
