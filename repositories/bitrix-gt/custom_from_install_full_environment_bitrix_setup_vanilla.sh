@@ -313,7 +313,7 @@ deployConfig() {
 	dplPush
 #	dplMYSQL
 
-  systemctl --now enable mariadb
+#  systemctl --now enable mariadb
 }
 
 deployInstaller() {
