@@ -311,9 +311,9 @@ deployConfig() {
 	dplNginx
 	dplRedis
 	dplPush
-#	dplMYSQL
+	dplMYSQL
 
-#  systemctl --now enable mariadb
+  systemctl --now enable mariadb
 }
 
 deployInstaller() {
