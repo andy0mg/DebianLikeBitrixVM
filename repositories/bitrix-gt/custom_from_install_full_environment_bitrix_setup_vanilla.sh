@@ -299,6 +299,8 @@ deployConfig() {
   rsync -a --exclude=php.d ./debian/ /etc/
   rsync -a ./debian/php.d/ /etc/php/8.2/mods-available/
   rsync -a ./debian/php.d/ /etc/php/7.4/mods-available/
+  grep -Rl '/var/www/html/bx-site' /etc | xargs sed -i 's/\/var\/www\/html\/bx-site/\/home\/bitrix\/www/g'
+  grep -Rl '/var/www/html' /etc | xargs sed -i 's/\/var\/www\/html/home\/bitrix/g'
 	mkdir -p /home/bitrix/www
 
 	nfTabl
